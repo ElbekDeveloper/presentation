@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>CSS Grid</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>css grid</h1>
+					<p>Elbek Normurodov</p>
+				</section>
+				
+				<section>
+					<h2>agenda</h2>
+					<ul>
+						<li>Why CSS Grid?</li>
+						<li>Properties</li>
+							<ul>
+								<li>Grid Rows & Columns</li>
+								<li>Grid Lines</li>
+								<li>Aligning & Justifying Items</li>
+							</ul>
+						<li>Let's Practice</li>
+					</ul>
+				</section>
+				<section>
+					<section> 
+						<h3>Say no to floats and positioning!</h3>
+						<img src="./assets/img/clear.jpg" alt="">
+					</section>
+					<section>
+						<p>Using CSS Grid Layout, we can develop a layout easily, using rows and columns</p>
+						<!-- <code style="background-color: rgb(44, 35, 22);">this is code</code> -->
+					</section>
+					<section>
+						<img src="./assets/img/notflex.png" alt="">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>So, let's look at some grid properties!</h3>
+					</section>
+					<section>
+						<code style="background-color: rgb(44, 35, 22);">
+					
+							display: grid; <br> 
+								grid-template-columns: repeat(3, 1fr);<br>	
+						
+						</code>
+						<img src="./assets/img/grid_columns.png" alt="" style="background-color: blanchedalmond;">
+					</section>
+					<section>
+							<p>Here is the styling of grid-container:</p>
+
+							<code style="background-color: rgb(44, 35, 22);">
+								display: grid; <br> 
+								grid-template-rows: minmax(100px, auto) <br>					
+							</code>
+							<img src="./assets/img/grid_rows.png" alt="" style="background-color: blanchedalmond;">
+						</section>
+
+						<section>
+	
+
+								<code style="background-color: rgb(44, 35, 22);">
+									display: grid; <br> 
+									grid-template-columns: repeat(3, 1fr); <br>	
+									grid-template-rows: minmax(100px, auto) <br>					
+								</code>
+								<img src="./assets/img/grid_gaps.png" alt="" style="background-color: blanchedalmond;">
+						</section>
+
+						<section>
+							<p>We can manipulate grid items using <code style="background-color: rgb(44, 35, 22);">grid-line</code> property.</p>
+							<img src="./assets/img/grid_lines.png" alt="" style="background-color: blanchedalmond;">
+						</section>
+						<section>
+							<p>Here is the styling of grid-item:</p>
+								<code style="background-color: rgb(44, 35, 22);">
+							
+										.grid-item{ <br>
+											grid-row-start: 1; <br>
+											grid-row-end: 3;	<br>
+											//this is equavalent grid-row: 1/ span 3; <br>
+										}
+									
+								</code>
+
+						</section>
+						<section>
+							<p>Here is the styling of grid-item:</p>
+								<code style="background-color:rgb(44, 35, 22);">
+									
+										.grid-item{ <br>
+											grid-column-start: 1; <br>
+											grid-column-end: 3;	<br>
+											//this is equavalent grid-column: 1/ span 3; <br>
+										}
+								
+								</code>
+
+						</section>
+				</section>
+				<section>
+					<section><img src="./assets/img/code.png" alt=""></section>
+					<section><img src="./assets/img/result.png" alt=""></section>
+				</section>
+				<section>
+					<h2>thank you!</h2>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
