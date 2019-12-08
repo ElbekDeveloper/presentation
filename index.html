@@ -61,32 +61,39 @@
 						<h3>So, let's look at some grid properties!</h3>
 					</section>
 					<section>
-						<code style="background-color: rgb(44, 35, 22);">
-					
-							display: grid; <br> 
-								grid-template-columns: repeat(3, 1fr);<br>	
+							<p>Here is the styling of grid-container:</p>
+						<pre><code  data-noescape data-trim>
+							.grid-container{
+								display: grid; <br> 
+								grid-template-columns: repeat(3, 1fr);
+							}	
 						
-						</code>
+						</code></pre>
 						<img src="./assets/img/grid_columns.png" alt="" style="background-color: blanchedalmond;">
 					</section>
 					<section>
-							<p>Here is the styling of grid-container:</p>
+							
 
-							<code style="background-color: rgb(44, 35, 22);">
-								display: grid; <br> 
-								grid-template-rows: minmax(100px, auto) <br>					
-							</code>
+							<pre><code data-noescape data-trim>
+								.grid-container{
+									display: grid; 
+									grid-template-rows: minmax(100px, auto);
+								}			
+							</code></pre>
 							<img src="./assets/img/grid_rows.png" alt="" style="background-color: blanchedalmond;">
 						</section>
 
 						<section>
 	
 
-								<code style="background-color: rgb(44, 35, 22);">
-									display: grid; <br> 
-									grid-template-columns: repeat(3, 1fr); <br>	
-									grid-template-rows: minmax(100px, auto) <br>					
-								</code>
+								<pre><code  data-noescape data-trim>
+									.grid-container{
+										display: grid;
+										grid-template-columns: repeat(3, 1fr);
+										grid-template-rows: minmax(100px, auto);	
+										grid-gap: 5px;				
+									}
+									</code></pre>
 								<img src="./assets/img/grid_gaps.png" alt="" style="background-color: blanchedalmond;">
 						</section>
 
@@ -96,28 +103,28 @@
 						</section>
 						<section>
 							<p>Here is the styling of grid-item:</p>
-								<code style="background-color: rgb(44, 35, 22);">
+								<pre><code data-noescape data-trim>
 							
 										.grid-item{ <br>
-											grid-row-start: 1; <br>
-											grid-row-end: 3;	<br>
-											//this is equavalent grid-row: 1/ span 3; <br>
+											grid-row-start: 1;
+											grid-row-end: 3;
+											//this is equavalent grid-row: 1/ span 2;
 										}
 									
-								</code>
+								</code></pre>
 
 						</section>
 						<section>
 							<p>Here is the styling of grid-item:</p>
-								<code style="background-color:rgb(44, 35, 22);">
+								<pre><code  data-noescape data-trim>
 									
-										.grid-item{ <br>
-											grid-column-start: 1; <br>
-											grid-column-end: 3;	<br>
-											//this is equavalent grid-column: 1/ span 3; <br>
+										.grid-item{ 
+											grid-column-start: 1;
+											grid-column-end: 3;	
+											//this is equavalent grid-column: 1/ span 2; 
 										}
 								
-								</code>
+								</code></pre>
 
 						</section>
 				</section>
